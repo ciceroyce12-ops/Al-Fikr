@@ -26,7 +26,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; }
         body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.7; }
 
-        /* Top Bar - Made significantly bigger and more prominent */
+        /* Top Bar - Big & Prominent */
         .top-bar {
             background-color: var(--orange);
             color: var(--white);
@@ -120,11 +120,11 @@
             height: auto;
             z-index: 1;
             pointer-events: none;
-            opacity: 0.45; /* Darkened slightly so text stays readable */
+            opacity: 0.45;
         }
         .hero-video-bg iframe {
             width: 100vw;
-            height: 56.25vw; /* Maintain aspect ratio */
+            height: 56.25vw;
             min-height: 100vh;
             min-width: 177.77vh;
             position: absolute;
@@ -133,7 +133,6 @@
             transform: translate(-50%, -50%);
         }
 
-        /* Dark overlay to make text pop over video */
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -181,7 +180,7 @@
         /* Program Section */
         .programs { padding: 80px 5%; text-align: center; }
         .programs h2 { color: var(--green); font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         
         /* Modern Cards */
         .card { 
@@ -192,10 +191,44 @@
             border-top: 6px solid var(--green);
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); 
             transition: all 0.3s ease;
+            text-align: left;
         }
         .card:hover { transform: translateY(-8px); border-top-color: var(--orange); box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1); }
         .card h3 { color: var(--orange); margin-bottom: 15px; font-size: 1.5rem; font-weight: 800; }
         .card p { color: var(--text-muted); font-size: 1.05rem; }
+
+        /* Branch Location Section */
+        .locations { padding: 80px 5%; background-color: #F1F5F9; text-align: center; border-top: 2px solid #E2E8F0; }
+        .locations h2 { color: var(--green); font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; }
+        .location-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 24px;
+            border: 2px solid #E2E8F0;
+            border-top: 6px solid var(--orange);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .location-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .location-card h3 { color: var(--green); margin-bottom: 10px; font-size: 1.4rem; font-weight: 800; }
+        .location-card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 20px; }
+        .btn-map {
+            background: var(--orange);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-map:hover { background: #C2410C; transform: translateY(-2px); box-shadow: 0 6px 15px rgba(234, 88, 12, 0.4); }
 
         /* Floating WhatsApp */
         .wa-float {
@@ -238,7 +271,7 @@
             <svg class="top-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.4L0 24l5.82-1.78A12 12 0 1 0 11.944 0zm0 22a10 10 0 0 1-5.18-1.44l-3.23.98.99-3.15A10 10 0 1 1 11.944 22zm5.33-7.23c-.29-.15-1.74-.86-2.01-.96-.28-.1-.48-.15-.68.15-.2.3-.77.96-.94 1.16-.17.2-.34.23-.63.08-2.03-.97-3.66-2.5-4.63-4.54-.15-.3-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.6-.48-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.89.12.58-.09 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.08-.12-.28-.2-.58-.34z"/>
             </svg>
-            Hubungi via Whatsapp: +62 851-0383-3392
+            Hubungi: 0851-0383-3392
         </a>
     </div>
 
@@ -250,13 +283,12 @@
         </a>
         <nav>
             <a href="#programs">Program</a>
-            <a href="#ppdb">Info PPDB</a>
+            <a href="#locations">Lokasi Cabang</a>
         </nav>
     </header>
 
     <!-- Hero Section with YouTube Short Background Embed -->
     <section class="hero">
-        <!-- YouTube Short Background Embed (Autoplay, Loop, Muted) -->
         <div class="hero-video-bg">
             <iframe src="https://www.youtube.com/embed/xajCy6YJnIg?autoplay=1&mute=1&loop=1&playlist=xajCy6YJnIg&controls=0&showinfo=0&autohide=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
@@ -269,7 +301,7 @@
         </div>
     </section>
 
-    <!-- Program Taxonomy -->
+    <!-- Program Taxonomy (Includes Rumah Tahfidz Alfikr) -->
     <section id="programs" class="programs">
         <h2>Pilihan Program Unggulan</h2>
         <div class="grid">
@@ -284,6 +316,31 @@
             <div class="card">
                 <h3>Bimbel & Training Center</h3>
                 <p>Pusat bimbingan belajar terpadu (KBIT/TKIT) dan aktivasi otak untuk mendongkrak konsentrasi, daya ingat, dan prestasi belajar anak Anda.</p>
+            </div>
+            <div class="card">
+                <h3>Rumah Tahfidz Alfikr</h3>
+                <p>Program khusus pembinaan Al-Qur'an dan tahfidz untuk membangun pondasi spiritual kuat serta akhlak mulia sejak dini bagi anak-anak.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Locations Section with Gmaps Buttons -->
+    <section id="locations" class="locations">
+        <h2>Lokasi Cabang Kami</h2>
+        <div class="grid" style="max-width: 900px; margin: 0 auto;">
+            <div class="location-card">
+                <div>
+                    <h3>Cabang 1</h3>
+                    <p>Temukan alamat lengkap, rute perjalanan, serta fasilitas operasional cabang pertama kami via Google Maps.</p>
+                </div>
+                <a href="https://maps.app.goo.gl/5k9QgcqjAbdUMnJ16" class="btn-map" target="_blank" rel="noopener noreferrer">📍 Buka Google Maps</a>
+            </div>
+            <div class="location-card">
+                <div>
+                    <h3>Cabang 2</h3>
+                    <p>Kunjungi lokasi cabang kedua kami untuk informasi pendaftaran program dan konsultasi langsung.</p>
+                </div>
+                <a href="https://maps.app.goo.gl/viSoh2T1MvUXVRbb9" class="btn-map" target="_blank" rel="noopener noreferrer">📍 Buka Google Maps</a>
             </div>
         </div>
     </section>
