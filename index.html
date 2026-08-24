@@ -7,12 +7,12 @@
     <style>
         /* Vibrant Color Palette */
         :root {
-            --green: #4CAF50; /* Fresh Green */
-            --yellow: #FFEB3B; /* Bright Sun Yellow */
-            --orange: #FF9800; /* Energetic Orange */
+            --green: #4CAF50; 
+            --yellow: #FFEB3B; 
+            --orange: #FF9800; 
             --white: #FFFFFF;
             --text-dark: #333333;
-            --wa-color: #25D366; /* Official WhatsApp Green */
+            --wa-color: #25D366; 
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -46,7 +46,7 @@
         /* Navigation */
         header { 
             background: var(--green); 
-            padding: 1rem 5%; 
+            padding: 0.5rem 5%; /* Slightly reduced padding to accommodate the image */
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -55,7 +55,16 @@
             top: 0; 
             z-index: 100; 
         }
-        .logo { font-size: 1.5rem; font-weight: 900; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+        
+        /* Logo Image Styling */
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { 
+            height: 65px; /* Adjust this number if you want the logo bigger or smaller */
+            width: auto; 
+            object-fit: contain;
+            filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.2)); /* Adds a little pop against the green */
+        }
+        
         nav a { margin-left: 20px; text-decoration: none; color: var(--white); font-weight: bold; }
         nav a:hover { color: var(--yellow); }
 
@@ -98,7 +107,7 @@
         .card:hover { transform: translateY(-5px); border-top-color: var(--orange); }
         .card h3 { color: var(--orange); margin-bottom: 15px; }
 
-        /* Floating WhatsApp Conversion Trigger with Logo */
+        /* Floating WhatsApp Conversion Trigger */
         .wa-float {
             position: fixed;
             bottom: 30px;
@@ -135,13 +144,16 @@
     <div class="top-bar">
         <span>Pendaftaran PPDB Dibuka!</span>
         <a href="https://wa.me/6285103833392?text=Halo%20Admin%20Al%20Fikr,%20saya%20mau%20info%20pendaftaran..." class="top-bar-btn" target="_blank" rel="noopener noreferrer">
-            Hubungi: 0851-0383-3392
+            Hubungi Whatsapp: +62 851-0383-3392
         </a>
     </div>
 
     <!-- Navigation -->
     <header>
-        <a href="#" class="logo">YAYASAN AL FIKR</a>
+        <a href="#" class="logo">
+            <!-- This is where your logo file is loaded -->
+            <img src="image (16).jpg" alt="Logo Al Fikr">
+        </a>
         <nav>
             <a href="#programs">Program</a>
             <a href="#ppdb">PPDB</a>
@@ -174,9 +186,8 @@
         </div>
     </section>
 
-    <!-- The Floating WhatsApp with official Logo -->
+    <!-- Floating WhatsApp -->
     <a href="https://wa.me/6285103833392?text=Halo%20Yayasan%20Al%20Fikr,%20saya%20ingin%20bertanya%20tentang%20program%20pendidikan..." class="wa-float" target="_blank" rel="noopener noreferrer">
-        <!-- SVG WhatsApp Logo -->
         <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.4L0 24l5.82-1.78A12 12 0 1 0 11.944 0zm0 22a10 10 0 0 1-5.18-1.44l-3.23.98.99-3.15A10 10 0 1 1 11.944 22zm5.33-7.23c-.29-.15-1.74-.86-2.01-.96-.28-.1-.48-.15-.68.15-.2.3-.77.96-.94 1.16-.17.2-.34.23-.63.08-2.03-.97-3.66-2.5-4.63-4.54-.15-.3-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.6-.48-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.89.12.58-.09 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.08-.12-.28-.2-.58-.34z"/>
         </svg>
