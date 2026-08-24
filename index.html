@@ -3,47 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yayasan Al Fikr | Islamic International EduFunPlay</title>
+    <title>Yayasan Al Fikr | EduFunPlay & Homeschooling</title>
     <style>
-        /* Core Variables & Reset */
+        /* Vibrant Color Palette */
         :root {
-            --primary: #0056b3; /* Educational Blue */
-            --secondary: #ffc107; /* Energetic Yellow */
-            --text: #333333;
-            --bg: #f8f9fa;
+            --green: #4CAF50; /* Fresh Green */
+            --yellow: #FFEB3B; /* Bright Sun Yellow */
+            --orange: #FF9800; /* Energetic Orange */
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --wa-color: #25D366; /* Official WhatsApp Green */
         }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        body { background-color: #f9fdf9; color: var(--text-dark); line-height: 1.6; }
 
-        /* Navigation Hub */
-        header { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); text-decoration: none; }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; }
+        /* Top Bar - High Visibility WhatsApp */
+        .top-bar {
+            background-color: var(--orange);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .top-bar-btn {
+            background: var(--white);
+            color: var(--orange);
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .top-bar-btn:hover { background: #fff5e6; }
+
+        /* Navigation */
+        header { 
+            background: var(--green); 
+            padding: 1rem 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        .logo { font-size: 1.5rem; font-weight: 900; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--white); font-weight: bold; }
+        nav a:hover { color: var(--yellow); }
 
         /* Hero Section */
-        .hero { text-align: center; padding: 100px 20px; background: linear-gradient(rgba(0,86,179,0.8), rgba(0,86,179,0.8)), url('hero-bg.jpg') center/cover; color: white; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-inline: auto; }
-        .btn { background: var(--secondary); color: #000; padding: 12px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #e0a800; }
+        .hero { 
+            text-align: center; 
+            padding: 80px 20px; 
+            background-color: var(--yellow);
+            color: var(--text-dark); 
+            border-bottom: 5px solid var(--orange);
+        }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; color: var(--green); text-shadow: 1px 1px 0px white; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-inline: auto; font-weight: 500; }
+        .btn-main { 
+            background: var(--orange); 
+            color: var(--white); 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(255, 152, 0, 0.4);
+            transition: transform 0.2s; 
+            display: inline-block;
+        }
+        .btn-main:hover { transform: scale(1.05); }
 
         /* Grid Layout for Programs */
-        .programs { padding: 50px 5%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .programs { padding: 60px 5%; text-align: center; }
+        .programs h2 { color: var(--green); font-size: 2.2rem; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 15px; 
+            border-top: 5px solid var(--green);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05); 
+            transition: 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); border-top-color: var(--orange); }
+        .card h3 { color: var(--orange); margin-bottom: 15px; }
 
-        /* Floating WhatsApp Conversion Trigger */
+        /* Floating WhatsApp Conversion Trigger with Logo */
         .wa-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25d366;
+            background-color: var(--wa-color);
             color: white;
             border-radius: 50px;
-            padding: 15px 25px;
+            padding: 12px 20px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 4px 10px rgba(37,211,102,0.4);
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.5);
             z-index: 1000;
             display: flex;
             align-items: center;
@@ -51,48 +118,69 @@
             transition: transform 0.3s;
         }
         .wa-float:hover { transform: scale(1.05); }
+        .wa-icon { width: 24px; height: 24px; fill: white; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2rem; }
+            .wa-float { bottom: 20px; right: 20px; padding: 10px 15px; font-size: 0.9rem; }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Top Action Bar -->
+    <div class="top-bar">
+        <span>Pendaftaran PPDB Dibuka!</span>
+        <a href="https://wa.me/6285103833392?text=Halo%20Admin%20Al%20Fikr,%20saya%20mau%20info%20pendaftaran..." class="top-bar-btn" target="_blank" rel="noopener noreferrer">
+            Hubungi: 0851-0383-3392
+        </a>
+    </div>
+
     <!-- Navigation -->
     <header>
-        <a href="#" class="logo">Yayasan Al Fikr</a>
+        <a href="#" class="logo">YAYASAN AL FIKR</a>
         <nav>
-            <a href="#programs">Program Kami</a>
-            <a href="#ppdb">Info PPDB</a>
+            <a href="#programs">Program</a>
+            <a href="#ppdb">PPDB</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Buka Potensimu Bersama Al Fikr</h1>
-        <p>Islamic International EduFunPlay, Homeschooling Talentspreneur, & Metode Otak Kanan.</p>
-        <a href="#ppdb" class="btn">Daftar Sekarang (PPDB)</a>
+        <h1>Bermain, Belajar, & Tumbuh Sesuai Fitrah</h1>
+        <p>Islamic International EduFunPlay, Homeschooling Talentspreneur, & Metode Otak Kanan untuk memaksimalkan potensi buah hati Anda.</p>
+        <a href="https://wa.me/6285103833392?text=Halo,%20saya%20tertarik%20dengan%20Trial%20Class..." class="btn-main" target="_blank" rel="noopener noreferrer">Daftar Trial Class</a>
     </section>
 
     <!-- Program Taxonomy -->
     <section id="programs" class="programs">
-        <h2>Ekosistem Pendidikan</h2>
+        <h2>Pilihan Program Unggulan</h2>
         <div class="grid">
             <div class="card">
                 <h3>Daycare, PG, TK IT</h3>
-                <p>Stimulasi metode otak kanan dan pendidikan berbasis fitrah untuk anak usia dini.</p>
+                <p>Stimulasi metode otak kanan dan pendidikan berbasis fitrah untuk anak usia dini. Menggabungkan bermain dan belajar dalam lingkungan Islami.</p>
             </div>
             <div class="card">
                 <h3>Homeschooling Talentspreneur</h3>
-                <p>SD, SMP, SMA dengan fokus pada pengembangan bakat vokasi dan entrepreneur.</p>
+                <p>Pendidikan SD, SMP, SMA dengan kurikulum fleksibel yang fokus pada pengembangan bakat, vokasi, dan jiwa entrepreneur anak.</p>
             </div>
             <div class="card">
                 <h3>Bimbel & Training</h3>
-                <p>Aktivasi otak dan bimbingan belajar terpadu untuk mendongkrak prestasi.</p>
+                <p>Pusat aktivasi otak dan bimbingan belajar terpadu (KBIT/TKIT) untuk mendongkrak konsentrasi dan prestasi belajar anak.</p>
             </div>
         </div>
     </section>
 
-    <!-- The Functional WhatsApp Link from 80917.jpg -->
+    <!-- The Floating WhatsApp with official Logo -->
     <a href="https://wa.me/6285103833392?text=Halo%20Yayasan%20Al%20Fikr,%20saya%20ingin%20bertanya%20tentang%20program%20pendidikan..." class="wa-float" target="_blank" rel="noopener noreferrer">
-        💬 Hubungi Admin
+        <!-- SVG WhatsApp Logo -->
+        <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.4L0 24l5.82-1.78A12 12 0 1 0 11.944 0zm0 22a10 10 0 0 1-5.18-1.44l-3.23.98.99-3.15A10 10 0 1 1 11.944 22zm5.33-7.23c-.29-.15-1.74-.86-2.01-.96-.28-.1-.48-.15-.68.15-.2.3-.77.96-.94 1.16-.17.2-.34.23-.63.08-2.03-.97-3.66-2.5-4.63-4.54-.15-.3-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.6-.48-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.89.12.58-.09 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.08-.12-.28-.2-.58-.34z"/>
+        </svg>
+        Hubungi kami via Whatsapp
     </a>
 
 </body>
