@@ -20,7 +20,8 @@
             --bg-light: #F8FAFC;
             --text-main: #1E293B;
             --text-muted: #475569;
-            --wa-color: #25D366; 
+            --wa-color: #25D366;
+            --ig-color: #E1306C;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; }
@@ -180,22 +181,45 @@
         /* Program Section */
         .programs { padding: 80px 5%; text-align: center; }
         .programs h2 { color: var(--green); font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         
-        /* Modern Cards */
+        /* Modern Cards with Instagram Catalog Button */
         .card { 
             background: var(--white); 
-            padding: 40px 30px; 
+            padding: 35px 30px; 
             border-radius: 24px; 
             border: 2px solid #E2E8F0;
             border-top: 6px solid var(--green);
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); 
             transition: all 0.3s ease;
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card:hover { transform: translateY(-8px); border-top-color: var(--orange); box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--orange); margin-bottom: 15px; font-size: 1.5rem; font-weight: 800; }
-        .card p { color: var(--text-muted); font-size: 1.05rem; }
+        .card h3 { color: var(--orange); margin-bottom: 12px; font-size: 1.4rem; font-weight: 800; }
+        .card p { color: var(--text-muted); font-size: 1rem; margin-bottom: 20px; }
+        
+        /* IG Catalog Button Styling */
+        .btn-ig {
+            background-color: var(--ig-color);
+            color: var(--white);
+            padding: 10px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(225, 48, 108, 0.3);
+            margin-top: auto;
+        }
+        .btn-ig:hover { transform: translateY(-2px); opacity: 0.9; box-shadow: 0 6px 15px rgba(225, 48, 108, 0.4); }
+        .ig-icon { width: 18px; height: 18px; fill: white; }
 
         /* Branch Location Section */
         .locations { padding: 80px 5%; background-color: #F1F5F9; text-align: center; border-top: 2px solid #E2E8F0; }
@@ -271,7 +295,7 @@
             <svg class="top-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 1.84 6.4L0 24l5.82-1.78A12 12 0 1 0 11.944 0zm0 22a10 10 0 0 1-5.18-1.44l-3.23.98.99-3.15A10 10 0 1 1 11.944 22zm5.33-7.23c-.29-.15-1.74-.86-2.01-.96-.28-.1-.48-.15-.68.15-.2.3-.77.96-.94 1.16-.17.2-.34.23-.63.08-2.03-.97-3.66-2.5-4.63-4.54-.15-.3-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.6-.48-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.91 1.23 3.11.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.89.12.58-.09 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.08-.12-.28-.2-.58-.34z"/>
             </svg>
-            Hubungi kami via Whatsapp: +62 851-0383-3392
+            Hubungi: 0851-0383-3392
         </a>
     </div>
 
@@ -282,7 +306,7 @@
             <span class="brand-text">YAYASAN AL FIKR</span>
         </a>
         <nav>
-            <a href="#programs">Program</a>
+            <a href="#programs">Program & Produk</a>
             <a href="#locations">Lokasi Cabang</a>
         </nav>
     </header>
@@ -301,43 +325,100 @@
         </div>
     </section>
 
-    <!-- Program Taxonomy (Includes Rumah Tahfidz Alfikr) -->
+    <!-- Program & Product Section with IG Catalogs -->
     <section id="programs" class="programs">
-        <h2>Pilihan Program Unggulan</h2>
+        <h2>Program & Katalog Lembaga Kami</h2>
         <div class="grid">
+            
+            <!-- Card 1: KBIT Al Fikr -->
             <div class="card">
-                <h3>Daycare, PG, TK IT</h3>
-                <p>Stimulasi metode otak kanan dan pendidikan berbasis fitrah untuk anak usia dini. Menggabungkan konsep bermain dan belajar dalam lingkungan yang sangat Islami.</p>
+                <div>
+                    <h3>KBIT Al Fikr (Daycare, PG, TK IT)</h3>
+                    <p>Stimulasi metode otak kanan dan pendidikan berbasis fitrah untuk anak usia dini dalam lingkungan yang sangat Islami.</p>
+                </div>
+                <a href="https://www.instagram.com/kbit_alfikr?igsi=MXI3M250aXk4OWt6cw==" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
             </div>
+
+            <!-- Card 2: Homeschooling Talentspreneur -->
             <div class="card">
-                <h3>Homeschooling Talentspreneur</h3>
-                <p>Pendidikan tingkat SD, SMP, hingga SMA dengan kurikulum fleksibel yang secara khusus fokus pada pengembangan bakat, vokasi, dan jiwa entrepreneur anak.</p>
+                <div>
+                    <h3>Homeschooling Talentspreneur</h3>
+                    <p>Pendidikan SD, SMP, hingga SMA kurikulum fleksibel yang fokus pada pengembangan bakat, vokasi, dan jiwa entrepreneur.</p>
+                </div>
+                <a href="https://www.instagram.com/alfikr.hstalentspreneur?igsi=MWNwY2w1ZnMzaHhkbw==" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
             </div>
+
+            <!-- Card 3: Rumah Tahfidz Alfikr -->
             <div class="card">
-                <h3>Bimbel & Training Center</h3>
-                <p>Pusat bimbingan belajar terpadu (KBIT/TKIT) dan aktivasi otak untuk mendongkrak konsentrasi, daya ingat, dan prestasi belajar anak Anda.</p>
+                <div>
+                    <h3>Rumah Tahfidz Alfikr</h3>
+                    <p>Program khusus pembinaan Al-Qur'an dan tahfidz untuk membangun pondasi spiritual kuat serta akhlak mulia sejak dini.</p>
+                </div>
+                <a href="https://www.instagram.com/rumah.tahfidz.alfikr?igsi=YXVneDN5dWc2aHpy" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
             </div>
+
+            <!-- Card 4: Lembaga Pendidikan Al-Fikr -->
             <div class="card">
-                <h3>Rumah Tahfidz Alfikr</h3>
-                <p>Program khusus pembinaan Al-Qur'an dan tahfidz untuk membangun pondasi spiritual kuat serta akhlak mulia sejak dini bagi anak-anak.</p>
+                <div>
+                    <h3>Lembaga Pendidikan Al-Fikr</h3>
+                    <p>Pusat layanan pendidikan terpadu yang menaungi berbagai unit sekolah berkualitas dengan sistem pembelajaran terbaik.</p>
+                </div>
+                <a href="https://www.instagram.com/lembaga_pendidikan_alfikr?igsi=cGlxM280b3gxY2cw" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
             </div>
+
+            <!-- Card 5: Al-Fikr Yogyakarta -->
+            <div class="card">
+                <div>
+                    <h3>Al-Fikr Yogyakarta</h3>
+                    <p>Pusat informasi kegiatan, event, dan aktivitas harian komunitas pendidikan Al-Fikr di area Yogyakarta.</p>
+                </div>
+                <a href="https://www.instagram.com/alfikr_yogyakarta?igsi=bzU2ODhqZGJxb28x" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
+            </div>
+
+            <!-- Card 6: Yayasan Al-Fikr Pusat -->
+            <div class="card">
+                <div>
+                    <h3>Yayasan Al-Fikr Pusat</h3>
+                    <p>Informasi resmi seputar profil yayasan, donasi sosial, kegiatan amal, dan program pengembangan jangka panjang.</p>
+                </div>
+                <a href="https://www.instagram.com/alfikryayasan?igsi=MTQyaHJoZzV1eHU1bg==" class="btn-ig" target="_blank" rel="noopener noreferrer">
+                    <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Lihat Katalog IG
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- Branch Locations Section with Gmaps Buttons -->
     <section id="locations" class="locations">
         <h2>Lokasi Cabang Kami</h2>
-        <div class="grid" style="max-width: 900px; margin: 0 auto;">
+        <div class="grid" style="max-width: 900px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
             <div class="location-card">
                 <div>
-                    <h3>Cabang Surakarta</h3>
+                    <h3>Surakarta</h3>
                     <p>Temukan alamat lengkap, rute perjalanan, serta fasilitas operasional cabang pertama kami via Google Maps.</p>
                 </div>
                 <a href="https://maps.app.goo.gl/5k9QgcqjAbdUMnJ16" class="btn-map" target="_blank" rel="noopener noreferrer">📍 Buka Google Maps</a>
             </div>
             <div class="location-card">
                 <div>
-                    <h3>Cabang Yogyakarta</h3>
+                    <h3>Cabang 2</h3>
                     <p>Kunjungi lokasi cabang kedua kami untuk informasi pendaftaran program dan konsultasi langsung.</p>
                 </div>
                 <a href="https://maps.app.goo.gl/viSoh2T1MvUXVRbb9" class="btn-map" target="_blank" rel="noopener noreferrer">📍 Buka Google Maps</a>
